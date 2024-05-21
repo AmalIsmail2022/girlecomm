@@ -2,7 +2,7 @@ import { DataTable } from "@/components/custom ui/DataTable"
 import { columns } from "@/components/orderItems/OrderItemsColums"
 
 const OrderDetails = async ({ params }: { params: { orderId: string }}) => {
-  const res = await fetch(`/api/orders/${params.orderId}`)
+  const res = await fetch(`https://girlecomm-77hpts7rn-ismamalhotmailcoms-projects.vercel.app/api/orders/${params.orderId}`)
   const { orderDetails, customer } = await res.json()
 
   const { street, city, state, postalCode, country } = orderDetails.shippingAddress
